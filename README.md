@@ -8,8 +8,11 @@ This project consists of a Flask backend API for ASD prediction and an Expo-base
 - Node.js 16 or higher
 - npm (Node Package Manager)
 - Git
+- Docker and Docker Compose (for containerized backend)
 
 ## Backend Setup
+
+### Option 1: Local Setup
 
 1. Navigate to the backend directory:
    ```bash
@@ -41,6 +44,29 @@ This project consists of a Flask backend API for ASD prediction and an Expo-base
    python flaskapp.py
    ```
    The backend API will be available at `http://localhost:5000`
+
+### Option 2: Docker Setup
+
+1. Navigate to the backend directory:
+   ```bash
+   cd backend
+   ```
+
+2. Build and start the Docker container:
+   ```bash
+   docker-compose up --build
+   ```
+   The backend API will be available at `http://localhost:5000`
+
+3. To stop the container:
+   ```bash
+   docker-compose down
+   ```
+
+4. To view container logs:
+   ```bash
+   docker-compose logs
+   ```
 
 ## Frontend Setup
 
