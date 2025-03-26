@@ -1,0 +1,6 @@
+runtime: python310  # Choose Python version
+entrypoint: gunicorn -b :$PORT main:app
+
+handlers:
+- url: /.*
+  script: auto
